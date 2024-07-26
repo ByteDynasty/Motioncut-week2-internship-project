@@ -1,0 +1,109 @@
+body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .background-blur {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        filter: blur(20px);
+        z-index: -2;
+        transition: background-image 1s ease-in-out;
+    }
+    
+    .slider-container-blur {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        filter: blur(10px);
+        z-index: -1;
+        transition: background-image 1s ease-in-out;
+    }
+    
+    .slider-container {
+        perspective: 1000px;
+        width: 80%;
+        max-width: 800px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        position: relative;
+        background-color: #fff;
+        z-index: 1;
+    }
+    
+    .slider {
+        display: flex;
+        transition: transform 1s ease-in-out;
+        width: 100%;
+    }
+    
+    .slide {
+        min-width: 100%;
+        position: relative;
+    }
+    
+    .slider img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+    
+    .caption {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(0, 0, 0, 0.6);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 18px;
+        text-align: center;
+        max-width: 80%;
+        font-family: 'Georgia', serif;
+        font-weight: bold;
+        letter-spacing: 2px;
+    }
+    
+    .navigation {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+    }
+    
+    .navigation button {
+        background-color: rgba(255, 255, 255, 0.7);
+        border: none;
+        padding: 10px 20px;
+        font-size: 24px;
+        cursor: pointer;
+        border-radius: 50%;
+        transition: background-color 0.3s;
+    }
+    
+    .navigation button:hover {
+        background-color: rgba(255, 255, 255, 1);
+    }
+    
